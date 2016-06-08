@@ -12,7 +12,7 @@
 		}
 
 		#magic{
-			color: #777;
+			color: red;
 			border-right: 1px solid #777;
 			padding-right: 7px;
 			display: inline;
@@ -21,7 +21,7 @@
 </head>
 <body>
 
-	Coding is <div id="magic"></div>
+	Beer is <div id="magic"></div>
 
 	<script>
 
@@ -30,12 +30,11 @@
 			word_counter = 0,
 			character_counter = 0;
 
-		function updateText()
-		{
-			el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
+		function updateText() {
+			el.innerHTML = el.innerHTML + words[word_counter][character_counter++];
 
-			if(character_counter == words[word_counter].length)
-			{
+			if(character_counter == words[word_counter].length + 1) {
+
 				word_counter++; 	//choose a different word
 				character_counter = 0;	//start over with the first character of the word
 				el.innerHTML = '';  //set the html to be blank
@@ -46,10 +45,16 @@
 			}
 		}
 
-		setInterval(updateText,300);
+		setInterval(updateText,500);
 
 	</script>
 
 </body>
 
 </html>
+
+
+
+
+
+
